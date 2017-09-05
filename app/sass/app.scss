@@ -1,31 +1,28 @@
-@import url('https://fonts.googleapis.com/css?family=Oxygen|Montserrat:900');
-
+@import url( 'https://fonts.googleapis.com/css?family=Oxygen|Montserrat:900');
 $color1: #7D7C84;
-$color2:#2D93AD;
+$color2: #2D93AD;
 $color3: #88AB75;
 $color4: #DBD56E;
 $color5: #DE8F6E;
-
-
 body {
 	margin: 0;
 	font-family: 'Raleway', sans-serif;
 	line-height: 2rem;
 	background-color: $color4;
 	color: rgba(black, 0.6);
-
 }
-h1, h2, h3 {
+h1,
+h2,
+h3 {
 	font-family: 'Montserrat', sans-serif;
 }
 b {
-		font-family: 'Montserrat', sans-serif;
+	font-family: 'Montserrat', sans-serif;
 }
 i {
 	color: $color2;
 }
 main {
-	//max-width: 800px;
 	margin: auto;
 }
 header {
@@ -39,8 +36,7 @@ header {
 	color: rgba($color2, 0.5);
 	background-color: $color4;
 	font-size: 2rem;
-	line-height:normal;
-
+	line-height: normal;
 	h1 {
 		color: $color4;
 		color: white;
@@ -48,9 +44,7 @@ header {
 		font-size: 3rem;
 		margin: 0;
 	}
-
 }
-
 a {
 	color: white;
 	text-decoration: none;
@@ -67,32 +61,30 @@ article {
 		color: white;
 		text-shadow: 5px 5px 1px rgba($color2, 0.5);
 	}
-	&>section {
+	& > section {
 		max-width: 800px;
 		margin-right: auto;
 		margin-left: auto;
 	}
-
 }
-
-article, header {
+article,
+header {
 	border-bottom: 2px solid rgba($color2, 0.5);
 }
-
 article:nth-child(2) {
 	background: $color5;
 	min-height: 100vh;
 }
 footer {
 	display: flex;
-	&>section {
+	& > section {
 		max-width: 1000px;
 		margin: auto;
 		display: flex;
 		width: 100%;
 		justify-content: space-between;
 		flex-wrap: wrap;
-		&>section {
+		& > section {
 			white-space: nowrap;
 		}
 	}
@@ -100,5 +92,4 @@ footer {
 	color: $color3;
 	background-color: darken($color3, 50%);
 	padding: 1rem;
-
 }
