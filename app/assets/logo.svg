@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="181.64827mm"
+   height="131.30099mm"
+   viewBox="0 0 181.64827 131.30099"
+   version="1.1"
+   id="svg3647"
+   inkscape:version="0.92.2 (5c3e80d, 2017-08-06)"
+   sodipodi:docname="logo.svg">
+  <defs
+     id="defs3641" />
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="0.35"
+     inkscape:cx="-187.07133"
+     inkscape:cy="-222.41626"
+     inkscape:document-units="mm"
+     inkscape:current-layer="layer1"
+     showgrid="false"
+     inkscape:window-width="1920"
+     inkscape:window-height="1016"
+     inkscape:window-x="1920"
+     inkscape:window-y="27"
+     inkscape:window-maximized="1" />
+  <metadata
+     id="metadata3644">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(-7.4496777,-2.4595493)">
+    <circle
+       cx="55.531658"
+       cy="75.064659"
+       r="47.820255"
+       style="clip-rule:evenodd;fill-rule:evenodd;stroke:#000000;stroke-width:0.52345043px;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:1.5"
+       id="circle34" />
+    <path
+       inkscape:connector-curvature="0"
+       d="M 45.52306,28.29549 H 45.372033 V 11.10228 L 55.293557,2.7212668 65.69128,11.10228 v 17.19321 h -0.150924 c -2.372739,-0.50624 -4.81055,-0.836095 -7.298874,-0.975308 l -0.101738,-6.031393 h -5.582893 l 0.03237,6.044937 c -2.407669,0.146444 -4.767371,0.471309 -7.066173,0.961764 z"
+       style="clip-rule:evenodd;fill-rule:evenodd;stroke:#000000;stroke-width:0.52345043px;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:1.5"
+       id="path36" />
+    <text
+       x="27.680323"
+       y="84.690948"
+       style="font-size:29.33339119px;font-family:ArialMT, Arial, sans-serif;clip-rule:evenodd;fill:#ffffff;fill-rule:evenodd;stroke-width:0.10183861;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:1.5"
+       id="text38">terapi</text>
+    <text
+       x="101.05657"
+       y="84.690948"
+       style="font-size:29.33339119px;font-family:ArialMT, Arial, sans-serif;clip-rule:evenodd;fill-rule:evenodd;stroke-width:0.10183861;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:1.5"
+       id="text40">e</text>
+    <path
+       inkscape:connector-curvature="0"
+       d="M 118.76835,72.170315 C 142.1231,66.336693 165.47785,60.502971 188.8326,54.669352"
+       style="clip-rule:evenodd;fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:0.52345043px;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:1.5"
+       id="path42" />
+    <path
+       inkscape:connector-curvature="0"
+       d="m 118.76835,82.680675 c 23.35475,7.35702 46.7095,14.71394 70.06425,22.070965"
+       style="clip-rule:evenodd;fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:0.52345043px;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:1.5"
+       id="path44" />
+    <g
+       style="clip-rule:evenodd;fill-rule:evenodd;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:1.5"
+       transform="matrix(0.36291311,0,0,0.36291311,-35.879392,35.451689)"
+       id="g52">
+      <text
+         x="187.27499"
+         y="269"
+         style="font-weight:700;font-size:8.97200012px;font-family:Arial-BoldMT, Arial, sans-serif"
+         id="text48">Mgr<tspan
+   x="203.226"
+   y="269"
+   id="tspan46">.</tspan>
+</text>
+      <text
+         x="207.89999"
+         y="269"
+         style="font-weight:700;font-size:15.35700035px;font-family:Arial-BoldMT, Arial, sans-serif"
+         id="text50">Jana Eismanová</text>
+    </g>
+  </g>
+</svg>

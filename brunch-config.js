@@ -13,24 +13,4 @@ exports.files = {
     joinTo: 'app.css'
 	},
 }
-exports.plugins = {
-		replacement: {
-			replacements: [
-				{
-				files: [/\.html$/],
-				match: {find: '{{TERAPEUT}}', replace: fs.readFileSync(path.join(dir, 'terapeut.svg'))},
-				},
-				{
-					files: [/\.html$/],
-					match: { find: '{{KONTAKT}}', replace: fs.readFileSync(path.join(dir, 'kontakt.svg')) }
-				},
-				{
-					files: [/\.html$/],
-					match: { find: '{{PRAVIDLA}}', replace: fs.readFileSync(path.join(dir, 'pravidla.svg')) }
-				},
-				{
-					files: [/\.html$/],
-					match: { find: '{{LADILNA}}', replace: fs.readFileSync(path.join(dir, 'ladilna.svg')) }
-				}
-		]}
-	}
+

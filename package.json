@@ -10,8 +10,7 @@
     "build": "brunch build --production"
   },
   "dependencies": {
-    "auto-reload-brunch": "^2.7.1",
-    "replacement-brunch": "^2.0.5"
+    "auto-reload-brunch": "^2.7.1"
   },
   "devDependencies": {
     "brunch": "^2",

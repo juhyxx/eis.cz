@@ -1,41 +1,66 @@
 <!DOCTYPE html>
 <html>
-	<head>
-		<meta charset="utf-8">
-		<title>Mgr. Jana Eismanová</title>
-		<script src='app.js'></script>
-		 <link rel="stylesheet" href="app.css">
-		 <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
-	</head>
-	<body>
-		<main>
-			<nav>
-					<a href=#terapie>Terapie</a>
-					<a href=#terapeut>Terapeut</a>
-					<a href="#kontakt">Kontakty</a>
-					<a href="#pravidla">Pravidla</a>
-					<a href="#ladilna">Ladílna</a>
-			</nav>
 
-			<article id=terapeut>
-				{{TERAPEUT}}
-			</article>
+<head>
+	<meta charset="utf-8">
+	<title>Mgr. Jana Eismanová</title>
+	<script src='app.js'></script>
+	<script>require('initialize');</script>
+	<link rel="stylesheet" href="app.css">
+	<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN"
+	 crossorigin="anonymous">
+</head>
 
-			<article id=kontakt>
-				{{KONTAKT}}
-			</article>
+<body>
+	<div id="logo"></div>
 
-			<article id=pravidla>
-				{{PRAVIDLA}}
-			</article>
+	<nav>
+		<a href=#terapie>Terapie</a>
+		<a href=#terapeut>Terapeut</a>
+		<a href="#kontakt">Kontakty</a>
+		<a href="#pravidla">Pravidla</a>
+		<a href="#ladilna">Ladílna</a>
+	</nav>
 
-			<article id=ladilna>
-				{{LADILNA}}
-			</article>
+	<article id=terapeut>
+		 <h1>Terapeut</h1>
+			<section class="bubble">Neco neco
+			</section>
+	</article>
+
+	<article id=kontakt>
+		<h1>Kontaktní<br>informace</h1>
+		<section class="bubble">
+				<div>
+					<b>Jana Eismanová</b>
+				</div>
+				<div>
+					<b>LaDílna</b>
+				</div>
+				<div>
+					<i class='fa fa-phone'></i>
+					<a tel="+420603901175">603 901 175</a>
+				</div>
+				<div>
+					<i class='fa fa-map-marker'></i> Houškova 24, Plzeň</div>
+				<div>
+					<i class='fa fa-envelope'></i>
+					<a href="mailto:jana.eismanova@gmail.com">jana.eismanova@gmail.com</a>
+				</div>
+				<div>IČ: 749 99 621</div>
+		</section>
+	</article>
+
+	<article id=pravidla>
+		<h1>Pravidla</h1>
+	</article>
+
+	<article id=ladilna>
+		<h1>LaDílna</h1>
+	</article>
 
 
-
-			<header>
+	<!--header>
 				<section>
 					<h1>Mgr. Jana Eismanová</h1>
 					psychoterapie
@@ -93,7 +118,8 @@
 					<section><i class='fa fa-envelope'></i> <a href="mailto:jana.eismanova@gmail.com">jana.eismanova@gmail.com</a></section>
 					<section>IČ: 749 99 621</section>
 				</section>
-			</footer>
-		</main>
-	</body>
+			</footer-->
+
+</body>
+
 </html>
