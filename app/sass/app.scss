@@ -1,145 +1,279 @@
-    @import url('https://fonts.googleapis.com/css?family=Oxygen|Montserrat:900');
-    $color1: #7D7C84;
-    $color2: #2D93AD;
-    $color3: #88AB75;
-    $color4: #DBD56E;
-    $color5: #DE8F6E;
-    body {
-        margin: 0;
-        font-family: 'Raleway', sans-serif;
-    }
+@import url("https://fonts.googleapis.com/css?family=Oxygen|Montserrat:900");
+$color1: #7d7c84;
+$color2: #2d93ad;
+$color3: #88ab75;
+$color4: #dbd56e;
+$color5: #de8f6e;
 
-    html {
-        scroll-behavior: smooth;
-    }
+body {
+	margin: 0;
+	font-family: "Raleway", sans-serif;
+}
 
-    a {
-        text-decoration: none;
-        color: black;
-    }
+html {
+	scroll-behavior: smooth;
+}
 
-    h1,
-    h2,
-    h3 {
-        //font-family: 'Montserrat', sans-serif;
-    }
+a {
+	text-decoration: none;
+	color: black;
+	transition: background-color 1s;
+}
 
-    nav {
-        text-align: right;
-        position: sticky;
-        top: 0.5rem;
-        text-transform: uppercase;
-        background-color: rgba(white, 0.7);
-        z-index: 100;
-        a {
-            padding: 0.5rem;
-            text-decoration: none;
-            &:after {
-                margin-left: 0.5rem;
-                content: '|'
-            }
-        }
-    }
+h1,
+h2,
+h3 {
+	font-family: "Montserrat", sans-serif;
+}
 
-    #logo {
-        background-image: url(logo.svg);
-        background-repeat: no-repeat;
-        background-size: contain;
-        height: 200px;
-        width: 300px;
-        position: fixed;
-        z-index: 1000;
-        margin: 1rem;
-    }
+nav {
+	text-align: right;
+	position: sticky;
+	top: 0rem;
+	text-transform: uppercase;
+	background-color: rgba(white, 0.7);
+	z-index: 100;
+	line-height: 2.5rem;
+	a {
+		padding: 0.5rem;
+		text-decoration: none;
+		white-space: nowrap;
+		opacity: 0.5;
+		border: 1px solid transparent;
+		&:hover {
+			background-color: rgba(black, 0.2);
+		}
+	}
 
-    article {
-        height: 100vh;
-        position: relative;
-        background-repeat: no-repeat;
-        background-position: center;
-    }
+	padding-left: 1rem;
+	padding-right: 1rem;
+}
 
-    .bubble {
-        position: absolute;
-        font-size: 1rem;
-    }
+@media screen and (min-width: 500px) {
+	#logo {
+		background-image: url(logo.svg);
+		background-repeat: no-repeat;
+		background-size: contain;
+		height: 200px;
+		width: 300px;
+		position: absolute;
+		z-index: 1000;
+	}
+	nav {
+		text-align: center;
+		padding-left: 300px;
+	}
+}
 
-    article {
-        h1 {
-            content: '';
-            background-color: #2D93AD;
-            color: white;
-            width: 20rem;
-            height: 20rem;
-            display: flex;
-            border-radius: 50%;
-            position: absolute;
-            bottom: -10rem;
-            left: 50%;
-            margin: 0;
-            margin-left: -10rem;
-            text-align: center;
-            padding-top: 2rem;
-            box-sizing: border-box;
-            justify-content: center;
-            text-transform: uppercase;
-            font-size: 1.5rem;
-        }
-        overflow: hidden;
-        .bubble {
-            transition: opacity 1s;
-            opacity: 0;
-            background-repeat: no-repeat;
-            background-size: cover;
-            position: absolute;
-            box-sizing: border-box;
-            color: gray;
-        }
-        &#ladilna {
-            background-image: url(svg/ladilna.svg);
-        }
-        &#terapeut {
-            background-image: url(svg/terapeut.svg);
-            .bubble {
-                background-image: url(svg/bterapeut.svg);
-                padding: 2rem;
-                text-align: right;
-                line-height: 1.4rem;
-                top: 17.5rem;
-                margin-left: -0rem;
-                left: 50%;
-                padding: 3.5rem;
-								padding-bottom: 5rem;
-								width: 335px;
-								height: 240px;
-            }
-            &:hover {
-                .bubble {
-                    opacity: 1;
-                }
-            }
-        }
-        &#pravidla {
-            background-image: url(svg/pravidla.svg);
-        }
-        &#kontakt {
-            background-image: url(svg/kontakt.svg);
-            .bubble {
-                background-image: url("svg/kontaktbubble.svg");
-                transform: rotate(20deg);
-                padding: 2rem;
-                text-align: right;
-                line-height: 1.4rem;
-                top: 13rem;
-                margin-left: -6rem;
-                left: 50%;
-                padding: 3.5rem;
-                padding-bottom: 5rem;
-            }
-            &:hover {
-                .bubble {
-                    opacity: 1;
-                }
-            }
-        }
-    }
+.circle {
+	position: fixed;
+	background-color: #2d93ad;
+	color: white;
+	width: 20rem;
+	height: 20rem;
+	display: flex;
+	border-radius: 50%;
+	bottom: -10rem;
+	left: 50%;
+	margin: 0;
+	margin-left: -10rem;
+	text-align: center;
+	padding-top: 2rem;
+	box-sizing: border-box;
+	justify-content: center;
+	text-transform: uppercase;
+	font-size: 1.5rem;
+	background-color: #da8319;
+	transition: background-color 1s;
+}
+
+article {
+	height: 100vh;
+	position: relative;
+	background-repeat: no-repeat;
+	background-position: center;
+	h1 {
+		content: "";
+		color: white;
+		width: 20rem;
+		height: 20rem;
+		display: flex;
+		position: absolute;
+		bottom: -12rem;
+		left: 50%;
+		margin: 0;
+		margin-left: -10rem;
+		text-align: center;
+		padding-top: 2rem;
+		box-sizing: border-box;
+		justify-content: center;
+		text-transform: uppercase;
+		font-size: 1.5rem;
+	}
+	overflow: hidden;
+	.bubble {
+		position: absolute;
+		font-size: 1rem;
+		transition: opacity 2s;
+		opacity: 0;
+		background-repeat: no-repeat;
+		background-size: contain;
+		position: absolute;
+		box-sizing: border-box;
+		color: gray;
+	}
+	&#ladilna {
+		background-image: url(svg/ladilna.svg);
+		.bubble {
+			background-image: url(svg/b-ladilna.svg);
+			line-height: 1.4rem;
+			top: 10vw;
+			margin-left: -0rem;
+			right: 5vw;
+			width: 335px;
+			height: 423px;
+			padding: 2.5rem;
+			transform: rotate(10deg);
+		}
+	}
+	&#terapeut {
+		background-image: url(svg/terapeut.svg);
+		.bubble {
+			background-image: url(svg/bterapeut.svg);
+			padding: 2rem;
+			text-align: right;
+			line-height: 1.4rem;
+			top: 17.5rem;
+			margin-left: -0rem;
+			left: 50%;
+			padding: 3.5rem;
+			padding-bottom: 5rem;
+			width: 335px;
+			height: 240px;
+		}
+		&:hover {
+			.bubble {
+				opacity: 1;
+			}
+		}
+	}
+	&#pravidla {
+		background-image: url(svg/pravidla.svg);
+	}
+	&#terapie-individualni {
+		background-image: url(svg/terapie-individualni.svg);
+		.bubble {
+			background-image: url("svg/b-terapie-individualni.svg");
+			transform: rotate(10deg);
+			padding: 2rem;
+			text-align: right;
+			line-height: 1.4rem;
+			top: 13rem;
+			margin-left: -6rem;
+			left: 50%;
+			padding: 3.5rem;
+			padding-bottom: 5rem;
+		}
+	}
+	&#terapie-skupinova {
+		background-image: url(svg/terapie-skupinova.svg);
+	}
+	&#kontakt {
+		background-image: url(svg/kontakt.svg);
+
+		.bubble {
+			background-image: url("svg/kontaktbubble.svg");
+			transform: rotate(20deg);
+			padding: 2rem;
+			text-align: right;
+			line-height: 1.4rem;
+			top: 13rem;
+			margin-left: -6rem;
+			left: 50%;
+			padding: 3.5rem;
+			padding-bottom: 5rem;
+		}
+		&:hover {
+			.bubble {
+				opacity: 1;
+			}
+		}
+	}
+}
+
+body.terapie-skupinova {
+	.circle {
+		background-color: #849ecc;
+	}
+}
+
+body.pravidla {
+	.circle {
+		background-color: #da8319;
+	}
+	nav a[href="#pravidla"] {
+
+	border: 1px solid black;
+	opacity: 1;
+	}
+}
+
+body.ladilna {
+	.circle {
+		background-color: #68a8b8;
+	}
+	nav a[href="#ladilna"] {
+		border: 1px solid black;
+	opacity: 1;
+	}
+	article .bubble {
+		opacity: 1;
+	}
+}
+
+body.terapie-individualni {
+	.circle {
+		background-color: $color2;
+	}
+	nav a[href="#terapie-individualni"] {
+		border: 1px solid black;
+	opacity: 1;
+	}
+	article .bubble {
+		opacity: 1;
+	}
+}
+body.terapie-skupinova {
+	.circle {
+		background-color: #d7696b;
+	}
+	nav a[href="#terapie-skupinova"] {
+			border: 1px solid black;
+	opacity: 1;
+	}
+}
+
+body.kontakt {
+	.circle {
+		background-color: #e1c2c2;
+	}
+	nav a[href="#kontakt"] {
+		border: 1px solid black;
+	opacity: 1;
+	}
+	article .bubble {
+		opacity: 1;
+	}
+}
+body.terapeut {
+	.circle {
+		background-color: $color4;
+	}
+	nav a[href="#terapeut"] {
+		border: 1px solid black;
+	opacity: 1;
+	}
+	article .bubble {
+		opacity: 1;
+	}
+}

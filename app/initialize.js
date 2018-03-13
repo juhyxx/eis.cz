@@ -1,31 +1,28 @@
-document.addEventListener('DOMContentLoaded', function() {
-//	resize();
-});
-window.addEventListener('resize', function() {
+var scrollTimeout;
+function onscroll() {
+	var scroll = Math.round(window.scrollY),
+		articles = document.querySelectorAll("article");
 
+	for (var i = 0; i < articles.length; i++) {
+		if (articles[i].offsetTop + articles[i].offsetHeight > scroll +40) {
+			var id = articles[i].id
 
-	//resize();
-
-});
-
-
-function resize() {
-
-	console.log('resize');
-
-
-	var box = document.querySelector('#kontakt svg path#bubble').getBoundingClientRect();
-
-
-	//document.querySelector('#kontakt .bubble').style.top = box.y + 'px';
-	//document.querySelector('#kontakt .bubble').style.left = box.x + 'px';
-	var style = document.querySelector('#kontakt .bubble').style;
-	style.width = box.width + 'px';
-	style.height = box.height + 'px';
-	style.top = window.pageYOffset + box.top + 'px';
-	style.left = window.pageXOffset + box.left + 'px';
-
-	console.log(box);
-
-
+			if (document.body.className !== id) {
+				document.body.className = articles[i].id;
+			}
+			break;
+		}
+	}
 }
+
+document.addEventListener('DOMContentLoaded', function() {
+	onscroll();
+});
+
+
+window.addEventListener('scroll', function(e) {
+	onscroll();
+
+});
+
+
