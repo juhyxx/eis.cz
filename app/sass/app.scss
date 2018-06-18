@@ -28,7 +28,9 @@ h3 {
 
 nav {
 	text-align: right;
-	position: sticky;
+	@media screen and (min-width: 800px) {
+		position: sticky;
+	}
 	top: 0rem;
 	text-transform: uppercase;
 	background-color: rgba(white, 0.7);
@@ -133,7 +135,6 @@ article {
 		position: absolute;
 		font-size: 1rem;
 		transition: opacity 2s;
-		opacity: 0;
 		background-repeat: no-repeat;
 		background-size: contain;
 		position: absolute;
@@ -162,37 +163,50 @@ article {
 			text-align: left;
 			line-height: 1.2rem;
 			top: 7.5rem;
-			margin-left: -0rem;
-			left: 50%;
+			margin-left: -1rem;
+			left: 50vw;
 			padding: 8rem;
 			padding-right: 4rem;
 			width: 600px;
 			font-size: 0.8rem;
 			padding-top: 4rem;
-		}
-		&:hover {
-			.bubble {
-				opacity: 1;
+			@media screen and (max-width: 1200px) {
+				left:0
 			}
 		}
 	}
 	&#pravidla {
-		background-image: url(svg/pravidla.svg);
+		//background-image: url(svg/pravidla.svg);
 		.bubble {
 			background-image: url("svg/b-terapie-individualni.svg");
-			transform: rotate(7deg);
+			transform: rotate(-6deg);
 			padding: 4rem;
 			text-align: left;
 			line-height: 1.4rem;
-			top: -1rem;
+			top: 1rem;
 			margin-left: -26rem;
 			left: 50%;
 			padding: 10rem;
 			padding-bottom: 19rem;
 			div {
+				transform: rotate(9deg);
 				overflow: auto;
-				width: 50rem;
+				max-width: 40rem;
     		height: 30rem;
+			}
+			@media screen and (max-width: 1000px) {
+					transform: rotate(0deg);
+					background-image:none;
+					padding: 1rem;
+					margin: 0;
+					left: 0;
+					height: 80vh;
+					bottom: 0rem;
+					top: auto;
+					div {
+						max-width: none;
+						transform: rotate(0deg);
+					}
 			}
 		}
 	}
@@ -203,8 +217,8 @@ article {
 		}
 		.bubble {
 			background-image: url("svg/b-terapie-individualni.svg");
-			transform: rotate(10deg);
-			padding: 4rem;
+			transform: rotate(5deg);
+			padding: 5rem;
 			text-align: left;
 			line-height: 1.4rem;
 			top: 1rem;
@@ -216,6 +230,15 @@ article {
 	}
 	&#terapie-skupinova {
 		background-image: url(svg/terapie-skupinova.svg);
+		.subtitle {
+			max-width: 800px;
+			transform: rotate(-5deg);
+			margin: 5rem auto;
+			color: gray;
+			border: 1px solid lightgray;
+			padding: 1.5rem;
+			border-radius: 2rem;
+		}
 	}
 	&#kontakt {
 		background-image: url(svg/kontakt.svg);
@@ -270,11 +293,9 @@ article {
 	}
 	&#pravidla {
 		div {
-			height: 60vh;
-			width: 80vw;
 			overflow: auto;
 			margin: auto;
-			margin-top: 3rem;
+			margin-top: -1rem;
 		}
 	}
 }
