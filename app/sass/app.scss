@@ -60,7 +60,7 @@ nav {
 }
 
 
-@media screen and (min-width: 500px) {
+@media screen and (min-width: 600px) {
 	#logo {
 		background-image: url(logo.svg);
 		background-repeat: no-repeat;
@@ -158,20 +158,23 @@ article {
 	&#terapeut {
 		background-image: url(svg/terapeut.svg);
 		.bubble {
-			background-image: url(svg/bterapeut.svg);
 			padding: 2rem;
-			text-align: left;
-			line-height: 1.2rem;
-			top: 7.5rem;
-			margin-left: -1rem;
-			left: 50vw;
-			padding: 8rem;
-			padding-right: 4rem;
-			width: 600px;
-			font-size: 0.8rem;
-			padding-top: 4rem;
-			@media screen and (max-width: 1200px) {
-				left:0
+			@media screen and (min-width: 600px) {
+				background-image: url(svg/bterapeut.svg);
+
+				text-align: left;
+				line-height: 1.2rem;
+				top: 7.5rem;
+				margin-left: -1rem;
+				left: 50vw;
+				padding: 8rem;
+				padding-right: 4rem;
+				width: 600px;
+				font-size: 0.8rem;
+				padding-top: 4rem;
+			}
+			@media screen and (max-width: 1000px) {
+				left: 0;
 			}
 		}
 	}
@@ -216,44 +219,53 @@ article {
 			padding: 0;
 		}
 		.bubble {
-			background-image: url("svg/b-terapie-individualni.svg");
-			transform: rotate(5deg);
-			padding: 5rem;
-			text-align: left;
-			line-height: 1.4rem;
-			top: 1rem;
-			margin-left: -17rem;
-			left: 50%;
-			padding: 5.5rem;
-			padding-bottom: 9rem;
+			padding: 2rem;
+			@media screen and (min-width: 600px) {
+				background-image: url("svg/b-terapie-individualni.svg");
+				transform: rotate(5deg);
+				padding: 5rem;
+				text-align: left;
+				line-height: 1.4rem;
+				top: 1rem;
+				margin-left: -17rem;
+				left: 50%;
+				padding: 5.5rem;
+				padding-bottom: 9rem;
+			}
 		}
 	}
 	&#terapie-skupinova {
 		background-image: url(svg/terapie-skupinova.svg);
-		.subtitle {
-			max-width: 800px;
-			transform: rotate(-5deg);
-			margin: 5rem auto;
+			padding: 2rem;
 			color: gray;
-			border: 1px solid lightgray;
-			padding: 1.5rem;
-			border-radius: 2rem;
+		.subtitle {
+				@media screen and (min-width: 600px) {
+				max-width: 800px;
+				transform: rotate(-5deg);
+				margin: 5rem auto;
+
+				border: 1px solid lightgray;
+				padding: 1.5rem;
+				border-radius: 2rem;
+			}
 		}
 	}
 	&#kontakt {
 		background-image: url(svg/kontakt.svg);
 
 		.bubble {
-			background-image: url("svg/kontaktbubble.svg");
-			transform: rotate(20deg);
 			padding: 2rem;
-			text-align: right;
-			line-height: 1.4rem;
-			top: 13rem;
-			margin-left: -6rem;
-			left: 50%;
-			padding: 3.5rem;
-			padding-bottom: 5rem;
+			@media screen and (min-width: 600px) {
+				background-image: url("svg/kontaktbubble.svg");
+				transform: rotate(20deg);
+				text-align: right;
+				line-height: 1.4rem;
+				top: 13rem;
+				margin-left: -6rem;
+				left: 50%;
+				padding: 3.5rem;
+				padding-bottom: 5rem;
+			}
 		}
 		&:hover {
 			.bubble {
@@ -263,32 +275,35 @@ article {
 	}
 	&#terapie-skupinova {
 		.bubble {
-			opacity: 0;
-			background-image: url("svg/kontaktbubble.svg");
-			padding: 2rem;
-			text-align: right;
-			line-height: 1.4rem;
-			top: 16rem;
-			margin-left: -2rem;
-			left: 50%;
-			padding: 3.5rem;
-			padding-bottom: 5rem;
-			width: 255px;
-			font-size: 0.8rem;
-			line-height: 1rem;
-			transform-origin: left bottom;
+			display: none;
+			@media screen and (min-width: 600px) {
+				opacity: 0;
+				display: block;
+				background-image: url("svg/kontaktbubble.svg");
+				padding: 2rem;
+				text-align: right;
+				line-height: 1.4rem;
+				top: 16rem;
+				margin-left: -2rem;
+				left: 50%;
+				padding: 3.5rem;
+				padding-bottom: 5rem;
+				width: 255px;
+				font-size: 0.8rem;
+				line-height: 1rem;
+				transform-origin: left bottom;
 
-			@for $i from 1 through 13 {
-				&:nth-child(#{$i}) {
-					$angle: $i * 72deg - 10deg;
-					transform: rotate($angle) translate(11rem, 0);
-					animation: circle 24s (($i - 1) * 2s) linear infinite;
-					div {
-						transform: rotate(-$angle);
+				@for $i from 1 through 13 {
+					&:nth-child(#{$i}) {
+						$angle: $i * 72deg - 10deg;
+						transform: rotate($angle) translate(11rem, 0);
+						animation: circle 24s (($i - 1) * 2s) linear infinite;
+						div {
+							transform: rotate(-$angle);
+						}
 					}
 				}
 			}
-
 		}
 	}
 	&#pravidla {
