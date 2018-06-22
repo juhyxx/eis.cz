@@ -60,7 +60,7 @@ nav {
 }
 
 
-@media screen and (min-width: 600px) {
+@media screen and (min-width: 800px) {
 	#logo {
 		background-image: url(logo.svg);
 		background-repeat: no-repeat;
@@ -159,7 +159,7 @@ article {
 		background-image: url(svg/terapeut.svg);
 		.bubble {
 			padding: 2rem;
-			@media screen and (min-width: 600px) {
+			@media screen and (min-width: 800px) {
 				background-image: url(svg/bterapeut.svg);
 
 				text-align: left;
@@ -169,7 +169,7 @@ article {
 				left: 50vw;
 				padding: 8rem;
 				padding-right: 4rem;
-				width: 600px;
+				width: 800px;
 				font-size: 0.8rem;
 				padding-top: 4rem;
 			}
@@ -220,7 +220,7 @@ article {
 		}
 		.bubble {
 			padding: 2rem;
-			@media screen and (min-width: 600px) {
+			@media screen and (min-width: 800px) {
 				background-image: url("svg/b-terapie-individualni.svg");
 				transform: rotate(5deg);
 				padding: 5rem;
@@ -239,7 +239,7 @@ article {
 			padding: 2rem;
 			color: gray;
 		.subtitle {
-				@media screen and (min-width: 600px) {
+				@media screen and (min-width: 800px) {
 				max-width: 800px;
 				transform: rotate(-5deg);
 				margin: 5rem auto;
@@ -255,7 +255,7 @@ article {
 
 		.bubble {
 			padding: 2rem;
-			@media screen and (min-width: 600px) {
+			@media screen and (min-width: 800px) {
 				background-image: url("svg/kontaktbubble.svg");
 				transform: rotate(20deg);
 				text-align: right;
@@ -276,7 +276,7 @@ article {
 	&#terapie-skupinova {
 		.bubble {
 			display: none;
-			@media screen and (min-width: 600px) {
+			@media screen and (min-width: 800px) {
 				opacity: 0;
 				display: block;
 				background-image: url("svg/kontaktbubble.svg");
