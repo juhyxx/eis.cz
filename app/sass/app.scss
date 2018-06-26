@@ -109,7 +109,7 @@ article {
 	background-repeat: no-repeat;
 	background-position: center;
 	overflow: hidden;
-	min-height: 1000px;
+
 	a {
 		border-bottom: 1px solid black;
 		color: gray;
@@ -117,12 +117,7 @@ article {
 			color: black;
 		}
 	}
-	@media screen and (max-width: 600px) {
-		background-size: 60%;
-	}
-	@media screen and (max-height: 600px) {
-		background-size: 50%;
-	}
+
 	h1 {
 		content: "";
 		color: white;
@@ -144,6 +139,17 @@ article {
 			bottom: -12rem;
 			font-size: 1.5rem;
 				margin-left: -10rem;
+		}
+	}
+	figure {
+		background-repeat: no-repeat;
+		@media screen and (max-width: 600px) {
+			background-position: bottom!important;
+			position: static!important;
+			margin: 0!important;
+			height: 100vh!important;
+			background-size: 70vh!important;
+			background-position: center 60vh!important;
 		}
 	}
 	.bubble {
@@ -184,12 +190,164 @@ article {
 				}
 				div {
 					max-width: none!important;
+					background-color: transparent!important;;
+				}
+			}
+			@media screen and (max-height: 600px) {
+				max-width: 40rem!important;
+				max-height: 50vh;
+				div {
+					line-height: 1.2rem!important;
 				}
 			}
 		}
+		&#terapie-individualni {
+			@media screen and (max-height: 800px) {
+				background-position: bottom;
+			}
+			figure {
+				position: absolute;
+				content: '';
+				height: 300px;
+				width: 600px;
+				background-image: url(svg/terapie-individualni.svg);
+				background-size: contain;
+				left: 50%;
+				margin-left: -150px;
+				bottom: 9rem;
+				.newbubble {
+					border: 70px solid transparent;
+					border-image: url("svg/b-terapie-individualni.svg") 280;
+					transform: rotate(5deg);
+					position: absolute;
+					top: -330px;
+					margin: auto;
+					overflow: auto;
+					left: auto;
+					right: 150px;
+					margin-left: -20rem;
+					&>div {
+						ul {
+							padding: 0;
+						}
+						padding: 1rem;
+					}
+				}
+				@media screen and (max-height: 800px) {
+					bottom: -20px!important;
+					height: 200px;
+					margin-left: -20px;
+					.newbubble {
+						right: 300px;
+						top: -300px;
+					}
+				}
+			}
+		}
+	&#terapie-skupinova {
+		background-image: url(svg/terapie-skupinova.svg);
+		padding: 2rem;
+		color: gray;
+	}
+	&#terapeut {
+		figure {
+				position: absolute;
+				content: '';
+				height: 400px;
+				width: 400px;
+				background-image: url(svg/terapeut.svg);
+				background-size: cover;
+				background-position:center;
+				background-repeat: no-repeat;
+				left: 30%;
+				margin-left: -150px;
+				bottom: 50%;
+				margin-bottom: -300px;
+				.newbubble {
+					top: -210px;
+					left: 250px;
+					margin: auto;
+					overflow: auto;
+					width: 600px;
+					max-width: 600px;
+					&>div {
+						padding: 1rem;
+						background-color: white;
+					}
+					@media screen and (max-width: 800px) {
+						width: 90vw;
+						left: 50%;
+						margin-left: -40vw;
+					}
+				}
+				@media screen and (max-height: 800px) {
+						left: 20%;
+							.newbubble {
+								top: -100px;
+								max-height: 60vh;
+							}
+				}
+
+			}
+	}
+
+	&#kontakt {
+		background-size: 80vh;
+			figure {
+				position: absolute;
+				content: '';
+				height: 400px;
+				width: 300px;
+				background-image: url(svg/kontakt.svg);
+				background-size: cover;
+				left: 40%;
+				margin-left: -150px;
+				bottom: 9rem;
+				.newbubble {
+					transform: rotate(5deg);
+					position: absolute;
+					top: -100px;
+					left: 170px;
+					width: 25rem;
+					margin: auto;
+					overflow: auto;
+					&>div {
+						line-height: 1.5rem;
+						padding: 1rem;
+						line-height: 2rem;
+						background-color: white;
+					}
+				}
+				@media screen and (max-height: 800px) {
+					bottom: -6rem;
+				}
+			}
+	}
+
+	&#pravidla {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			align-content: center;
+			.newbubble {
+				border: 80px solid transparent;
+				border-image: url("svg/b.svg") 80;
+				transform: rotate(5deg);
+				max-width: 40rem;
+
+
+				margin: auto;
+				margin-top: 1rem;
+				overflow: hidden;
+				left: auto;
+				div {
+					height: 60vh;
+					overflow: auto;
+				}
+ 			}
+	}
 	&#ladilna {
 		background-image: url(svg/ladilna.svg);
-		background-color: white;
 		.newbubble {
 			border-image: url("svg/b-ladilna.svg") 80;
 			transform: rotate(10deg);
@@ -201,110 +359,13 @@ article {
 			&>div {
 				max-width: 50vw;
 			}
-
 		}
 	}
-	&#terapeut {
-			background-image: url(svg/terapeut.svg);
-			background-position: -10rem 0;
-		.newbubble {
-			top: 8vh;
-			left: 39vw;
-			max-width: 30rem;
-			margin: auto;
-			overflow: auto;
-			&>div {
-				padding: 1rem;
-				background-color: white;
-			}
-			@media screen and (max-width: 800px) {
-				width: 90vw;
-				left: 50%;
-				margin-left: -40vw;
-			}
 
-		}
-	}
-	&#pravidla {
-			display: flex;
-			flex-direction: column;
-			align-items: center;
-			align-content: center;
-			.newbubble {
-				border: 80px solid transparent;
-				border-image: url("svg/b.svg") 80;
-				transform: rotate(5deg);
-				max-width: 40rem;
-				max-height: 60vh;
-				margin: auto;
-				margin-top: 1rem;
-				overflow: hidden;
-				left: auto;
-				div {
-					//height: 30rem;
-					overflow: auto;
-				}
- 			}
-	}
-	&#terapie-individualni {
-		background-image: url(svg/terapie-individualni.svg);
-
-		@media screen and (max-height: 800px) {
-			background-position: bottom;
-		}
-		.newbubble {
-			border: 70px solid transparent;
-			border-image: url("svg/b-terapie-individualni.svg") 280;
-			transform: rotate(5deg);
-			position: absolute;
-			top: 6vh;
-			max-width: 40rem;
-			margin: auto;
-			overflow: auto;
-			left: 50%;
-			margin-left: -20rem;
-			&>div {
-
-				ul {
-					padding: 0;
-				}
-				padding: 1rem;
-			}
-		}
-	}
-	&#terapie-skupinova {
-		background-image: url(svg/terapie-skupinova.svg);
-		@media screen and (max-width: 800px) {
-		//	background-size: 90%;
-		}
-		padding: 2rem;
-		color: gray;
-
-	}
-	&#kontakt {
-		background-image: url(svg/kontakt.svg);
-		//background-size: 80vh;
-
-		.newbubble {
-			transform: rotate(5deg);
-			position: absolute;
-			top: 6vh;
-			left: 50vw;
-			width: 25rem;
-			margin: auto;
-			overflow: auto;
-			&>div {
-				line-height: 1.5rem;
-				padding: 1rem;
-				line-height: 2rem;
-				background-color: white;
-			}
-		}
-	}
 	&#terapie-skupinova {
 		.bubble {
 			display: none;
-			@media screen and (min-width: 800px) {
+			@media screen and (min-width: 800px) and (min-height: 700px) {
 				opacity: 0;
 				display: block;
 				background-image: url("svg/kontaktbubble.svg");
