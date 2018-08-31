@@ -14,3 +14,8 @@ exports.files = {
 	},
 }
 
+exports.plugins = {
+  sass: {
+    allowCache: false
+  }
+}
