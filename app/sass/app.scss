@@ -90,6 +90,11 @@ nav {
 		&#terapie-individualni:after {
 			background-image: url(svg/terapie-individualni.svg);	
 		}
+		&#terapie-skupinova{
+			.bubble {
+				display: none;
+			}
+		}
 		&#terapie-skupinova:after {
 			background-image: url(svg/terapie-skupinova.svg);	
 		}
