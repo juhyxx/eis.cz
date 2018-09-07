@@ -6,6 +6,8 @@ $color4: #dbd56e;
 $color5: #de8f6e;
 
 $breakpoint: 700px;
+
+@import 'collapsible';
  
 body {
 	margin: 0;
