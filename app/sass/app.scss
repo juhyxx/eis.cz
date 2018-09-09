@@ -338,11 +338,12 @@ nav {
 							padding: 1rem;
 							background-color: white;
 						}
-						@media screen and (max-width: 800px) {
-							width: 90vw;
-							left: 50%;
-							margin-left: -40vw;
-						}
+						
+					}
+					@media screen and (max-width: 1000px) {
+						width: 90vw;
+						left: 8rem;
+						margin-left: -40vw;
 					}
 					@media screen and (max-height: $breakpoint) {
 							left: 20%;
@@ -404,7 +405,7 @@ nav {
 					margin-top: 1rem;
 					overflow: hidden;
 					left: auto;
-					div {
+					&>div {
 						height: 60vh;
 						overflow: auto;
 					}

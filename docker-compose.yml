@@ -1,0 +1,13 @@
+version: '3'
+services:
+
+  eis:
+    build: .
+    image: eis
+    ports:
+      - 3333:3333
+    command: yarn start
+    networks:
+      - default
+    volumes:
+      - ./:/usr/src/app
