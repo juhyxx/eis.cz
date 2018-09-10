@@ -31,8 +31,28 @@ h3 {
 	font-family: "Montserrat", sans-serif;
 }
 
+nav {
+	display: none;
+	text-transform: uppercase;
+	background-color: rgba(white, 0.7);
+	flex-wrap: wrap;
+	justify-content: flex-end;
+	a {
+		text-decoration: none;
+		white-space: nowrap;
+		opacity: 0.5;
+		border: 1px solid transparent;
+		padding:  0 0.5rem;
+		&:hover {
+			background-color: rgba(black, 0.2);
+		}
+	}
+}
+
+
 @media screen and (min-width: $breakpoint) {
 	nav {
+		display: flex;
 		text-align: right;
 		@media screen and (min-width: $breakpoint) {
 			position: sticky;
@@ -59,24 +79,6 @@ h3 {
 	}
 }
 
-nav {
-	text-transform: uppercase;
-	background-color: rgba(white, 0.7);
-	display: flex;
-	flex-wrap: wrap;
-	justify-content: flex-end;
-	a {
-		text-decoration: none;
-		white-space: nowrap;
-		opacity: 0.5;
-		border: 1px solid transparent;
-		padding:  0 0.5rem;
-		&:hover {
-			background-color: rgba(black, 0.2);
-		}
-	}
-}
-
 @media screen and (max-width: $breakpoint) {
 	article {
 		padding: 1rem;
@@ -89,28 +91,61 @@ nav {
 			background-size: contain;
 			background-position: center center;
 		}
-		&#terapie-individualni:after {
-			background-image: url(svg/terapie-individualni.svg);	
+		&#terapie-individualni{
+			h1 {
+				color: $color2!important;
+			}
+			&:after {
+				background-image: url(svg/terapie-individualni.svg);	
+			}
 		}
 		&#terapie-skupinova{
+			h1 {
+				color: $color2!important;
+			}
 			.bubble {
 				display: none;
 			}
 		}
-		&#terapie-skupinova:after {
-			background-image: url(svg/terapie-skupinova.svg);	
+		&#terapie-skupinova{
+			h1 {
+				color: $color3!important;
+			}
+			&:after {
+				background-image: url(svg/terapie-skupinova.svg);	
+			}
 		}
-		&#ladilna:after {
-			background-image: url(svg/ladilna.svg);	
+		&#ladilna{ 
+			h1 {
+				color: $color2!important;
+			}
+			&:after {
+				background-image: url(svg/ladilna.svg);	
+			}
 		}
-		&#kontakt:after {
-			background-image: url(svg/kontakt.svg);	
+		&#kontakt{
+			h1 {
+				color: #e1c2c2!important;
+			}
+			&:after {
+				background-image: url(svg/kontakt.svg);	
+			}
 		}
-		&#pravidla:after {
-			background-image: url(svg/pravidla.svg);	
+		&#pravidla{ 
+			h1 {
+				color: $color5!important;
+			}
+			&:after {
+				background-image: url(svg/pravidla.svg);	
+			}
 		}
-		&#terapeut:after {
-			background-image: url(svg/terapeut.svg);	
+		&#terapeut{
+			h1 {
+				color: $color4!important;
+			}
+			&:after {
+				background-image: url(svg/terapeut.svg);	
+			}
 		}
 	}
 	nav {
@@ -125,6 +160,17 @@ nav {
 	}
 	figure {
 		margin: 0;
+	}
+}
+@media screen and (max-width: $breakpoint) {
+	#logo {
+		background-image: url(logo.svg);
+		background-repeat: no-repeat;
+		background-size: contain;
+		height: 100vh;
+		width: 100wv;
+		background-position: center;
+		margin: 1rem
 	}
 }
 
@@ -528,7 +574,7 @@ body.kontakt {
 		background-color: #e1c2c2;
 	}
 	nav a[href="#kontakt"] {
-		border: 1px solid black;
+		border: 1px solid rgb(24, 9, 9);
 	opacity: 1;
 	}
 	article .bubble {
