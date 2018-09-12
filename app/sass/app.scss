@@ -61,9 +61,8 @@ nav {
 		text-transform: uppercase;
 		background-color: rgba(white, 0.7);
 		z-index: 100;
-		line-height: 2.5rem;
 		a {
-			padding: 0.5rem;			
+			padding: 0.25rem 0.5rem;			
 		}
 
 		padding-left: 1rem;
@@ -81,15 +80,17 @@ nav {
 
 @media screen and (max-width: $breakpoint) {
 	article {
+		line-height: 1.4rem;
 		padding: 1rem;
+		min-height: 100vh;
 		&:after {
 			content: '';
 			background-repeat: no-repeat;
-			height: 30vh;
+			height: 40vh;
 			width: 80vw;
 			display: block;
 			background-size: contain;
-			background-position: center center;
+			background-position: center bottom;
 		}
 		&#terapie-individualni{
 			h1 {
@@ -161,8 +162,6 @@ nav {
 	figure {
 		margin: 0;
 	}
-}
-@media screen and (max-width: $breakpoint) {
 	#logo {
 		background-image: url(logo.svg);
 		background-repeat: no-repeat;
@@ -173,6 +172,7 @@ nav {
 		margin: 1rem
 	}
 }
+
 
 @media screen and (min-width: $breakpoint) {
 	#logo {
@@ -356,7 +356,6 @@ nav {
 			}
 		&#terapie-skupinova {
 			background-image: url(svg/terapie-skupinova.svg);
-			padding: 2rem;
 			color: gray;
 		}
 		&#terapeut {
@@ -508,7 +507,7 @@ nav {
 			}
 		}
 		&#pravidla {
-			div {
+			&>div {
 				overflow: auto;
 				margin: auto;
 				margin-top: -1rem;

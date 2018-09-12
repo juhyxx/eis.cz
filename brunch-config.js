@@ -19,3 +19,7 @@ exports.plugins = {
     allowCache: false
   }
 }
+
+exports.watcher= {
+  usePolling: true
+}

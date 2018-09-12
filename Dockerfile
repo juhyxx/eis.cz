@@ -1,7 +1,8 @@
 FROM node:6
 
+EXPOSE 3333
 WORKDIR  /usr/src/app
 COPY . /usr/src/app
 RUN yarn install
-EXPOSE 3333
-CMD yarn start
+
+CMD ["yarn", "run", "start"]
