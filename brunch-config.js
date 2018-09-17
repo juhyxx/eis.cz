@@ -23,3 +23,6 @@ exports.plugins = {
 exports.watcher= {
   usePolling: true
 }
+exports.server = {
+  hostname: '0.0.0.0'
+}
