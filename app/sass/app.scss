@@ -1,6 +1,6 @@
 @import url("https://fonts.googleapis.com/css?family=Oxygen|Montserrat:900");
 $color1: #7d7c84;
-$color2: #2d93ad;
+$color2:  #2d93ad;
 $color3: #88ab75;
 $color4: #dbd56e;
 $color5: #de8f6e;
@@ -179,10 +179,12 @@ nav {
 		background-image: url(logo.svg);
 		background-repeat: no-repeat;
 		background-size: contain;
-		height: 200px;
-		width: 300px;
-		position: absolute;
+		height: 130px;
+		width: 200px;
+		position: fixed;
 		z-index: 1000;
+		left: 1rem;
+		top:1rem
 	}
 	nav {
 		text-align: center;
