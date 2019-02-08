@@ -8,7 +8,7 @@ services:
       - 3333:3333
     expose:
     - "3333"
-    command: yarn start
+    command: yarn build
     networks:
       - default
     volumes:
