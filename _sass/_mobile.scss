@@ -1,0 +1,93 @@
+article {
+    line-height: 1.4rem;
+    padding: 1rem;
+    min-height: 20vh;
+    margin-bottom: 2rem;
+    &:after {
+        content: '';
+        background-repeat: no-repeat;
+        height: 40vh;
+        width: 80vw;
+        display: block;
+        background-size: contain;
+        background-position: center bottom;
+    }
+    &#terapie-individualni{
+        h1 {
+            color: $color2!important;
+        }
+        &:after {
+            background-image: url(svg/terapie-individualni.svg);	
+        }
+    }
+    &#terapie-skupinova{
+        h1 {
+            color: $color2!important;
+        }
+        .bubble {
+            display: none;
+        }
+    }
+    &#terapie-skupinova{
+        h1 {
+            color: $color3!important;
+        }
+        &:after {
+            background-image: url(svg/terapie-skupinova.svg);	
+        }
+    }
+    &#ladilna{ 
+        h1 {
+            color: $color2!important;
+        }
+        &:after {
+            background-image: url(svg/ladilna.svg);	
+        }
+    }
+    &#kontakt{
+        h1 {
+            color: #e1c2c2!important;
+        }
+        &:after {
+            background-image: url(svg/kontakt.svg);	
+        }
+    }
+    &#pravidla{ 
+        h1 {
+            color: $color5!important;
+        }
+        &:after {
+            background-image: url(svg/pravidla.svg);	
+        }
+    }
+    &#terapeut{
+        h1 {
+            color: $color4!important;
+        }
+        &:after {
+            background-image: url(svg/terapeut.svg);	
+        }
+    }
+}
+nav {
+    flex-direction: column;
+    a {
+        padding: 0.5rem 1rem;
+    }
+}
+h1 {
+    text-align: center;
+    text-transform: uppercase;
+}
+figure {
+    margin: 0;
+}
+#logo {
+    background-image: url(logo.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    height: 100vh;
+    width: 100wv;
+    background-position: center;
+    margin: 1rem
+}
