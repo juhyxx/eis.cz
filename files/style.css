@@ -1,0 +1,573 @@
+@import url("https://fonts.googleapis.com/css?family=Oxygen|Montserrat:900");
+input[type='checkbox'] {
+  display: none; }
+
+@media screen and (min-width: 700px) {
+  .wrap-collabsible label {
+    display: none; } }
+
+@media screen and (max-width: 700px) {
+  .wrap-collabsible {
+    margin-bottom: 1.2rem 0; }
+  .lbl-toggle {
+    display: block;
+    cursor: pointer;
+    color: black; }
+  .lbl-toggle:hover {
+    color: #7C5A0B; }
+  .lbl-toggle::before {
+    content: ' ';
+    display: inline-block;
+    border-top: 5px solid transparent;
+    border-bottom: 5px solid transparent;
+    border-left: 5px solid currentColor;
+    vertical-align: middle;
+    margin-right: .7rem;
+    transform: translateY(-2px);
+    transition: transform .2s ease-out; }
+  .toggle:checked + .lbl-toggle::before {
+    transform: rotate(90deg) translateX(-3px); }
+  .collapsible-content {
+    max-height: 0px;
+    overflow: hidden; }
+  .toggle:checked + .lbl-toggle + .collapsible-content {
+    max-height: none; }
+  .toggle:checked + .lbl-toggle {
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 0; } }
+
+body {
+  margin: 0;
+  font-family: "Raleway", sans-serif;
+  color: gray; }
+
+html {
+  scroll-behavior: smooth; }
+
+a {
+  text-decoration: none;
+  color: black;
+  transition: background-color 1s; }
+
+h1,
+h2,
+h3 {
+  font-family: "Montserrat", sans-serif; }
+
+nav {
+  display: none;
+  text-transform: uppercase;
+  background-color: rgba(255, 255, 255, 0.7);
+  flex-wrap: wrap;
+  justify-content: flex-end; }
+  nav a {
+    text-decoration: none;
+    white-space: nowrap;
+    opacity: 0.5;
+    border: 1px solid transparent;
+    padding: 0 0.5rem; }
+    nav a:hover {
+      background-color: rgba(0, 0, 0, 0.2); }
+
+@media screen and (min-width: 700px) {
+  nav {
+    display: flex;
+    text-align: right;
+    top: 0rem;
+    text-transform: uppercase;
+    background-color: rgba(255, 255, 255, 0.7);
+    z-index: 100;
+    padding-left: 1rem;
+    padding-right: 1rem; } }
+  @media screen and (min-width: 700px) and (min-width: 700px) {
+    nav {
+      position: sticky;
+      margin-top: -28px;
+      flex-wrap: nowrap; } }
+
+@media screen and (min-width: 700px) {
+    nav a {
+      padding: 0.25rem 0.5rem; } }
+
+*[title] {
+  border-bottom: 1px dotted black;
+  cursor: help; }
+  *[title]:hover {
+    color: black; }
+
+@media screen and (max-width: 700px) {
+  article {
+    line-height: 1.4rem;
+    padding: 1rem;
+    min-height: 100vh; }
+    article:after {
+      content: '';
+      background-repeat: no-repeat;
+      height: 40vh;
+      width: 80vw;
+      display: block;
+      background-size: contain;
+      background-position: center bottom; }
+    article#terapie-individualni h1 {
+      color: #2d93ad !important; }
+    article#terapie-individualni:after {
+      background-image: url(svg/terapie-individualni.svg); }
+    article#terapie-skupinova h1 {
+      color: #2d93ad !important; }
+    article#terapie-skupinova .bubble {
+      display: none; }
+    article#terapie-skupinova h1 {
+      color: #88ab75 !important; }
+    article#terapie-skupinova:after {
+      background-image: url(svg/terapie-skupinova.svg); }
+    article#ladilna h1 {
+      color: #2d93ad !important; }
+    article#ladilna:after {
+      background-image: url(svg/ladilna.svg); }
+    article#kontakt h1 {
+      color: #e1c2c2 !important; }
+    article#kontakt:after {
+      background-image: url(svg/kontakt.svg); }
+    article#pravidla h1 {
+      color: #de8f6e !important; }
+    article#pravidla:after {
+      background-image: url(svg/pravidla.svg); }
+    article#terapeut h1 {
+      color: #dbd56e !important; }
+    article#terapeut:after {
+      background-image: url(svg/terapeut.svg); }
+  nav {
+    flex-direction: column; }
+    nav a {
+      padding: 0.5rem 1rem; }
+  h1 {
+    text-align: center;
+    text-transform: uppercase; }
+  figure {
+    margin: 0; }
+  #logo {
+    background-image: url(logo.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    height: 100vh;
+    width: 100wv;
+    background-position: center;
+    margin: 1rem; } }
+
+@media screen and (min-width: 700px) {
+  #logo {
+    background-image: url(logo.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    height: 130px;
+    width: 200px;
+    position: fixed;
+    z-index: 1000;
+    left: 1rem;
+    top: 1rem; }
+  nav {
+    text-align: center;
+    padding-left: 300px; }
+  .circle {
+    position: fixed;
+    background-color: #2d93ad;
+    color: white;
+    width: 15rem;
+    height: 15rem;
+    display: flex;
+    border-radius: 50%;
+    bottom: -10rem;
+    left: 50%;
+    margin: 0;
+    margin-left: -10rem;
+    text-align: center;
+    padding-top: 2rem;
+    box-sizing: border-box;
+    justify-content: center;
+    text-transform: uppercase;
+    font-size: 1.5rem;
+    background-color: #da8319;
+    transition: background-color 1s; } }
+  @media screen and (min-width: 700px) and (min-height: 800px) {
+    .circle {
+      width: 20rem;
+      height: 20rem; } }
+
+@media screen and (min-width: 700px) {
+  article {
+    height: 100vh;
+    position: relative;
+    background-repeat: no-repeat;
+    background-position: center;
+    overflow: hidden; }
+    article a {
+      border-bottom: 1px solid black;
+      color: gray; }
+      article a:hover {
+        color: black; }
+    article h1 {
+      content: "";
+      color: white;
+      width: 20rem;
+      height: 20rem;
+      display: flex;
+      position: absolute;
+      left: 50%;
+      margin: 0;
+      text-align: center;
+      box-sizing: border-box;
+      justify-content: center;
+      text-transform: uppercase;
+      font-size: 1rem;
+      bottom: -17rem;
+      margin-left: -12rem; } }
+    @media screen and (min-width: 700px) and (min-height: 800px) {
+      article h1 {
+        padding-top: 2rem;
+        bottom: -12rem;
+        font-size: 1.5rem;
+        margin-left: -10rem; } }
+
+@media screen and (min-width: 700px) {
+    article figure {
+      background-repeat: no-repeat; } }
+    @media screen and (min-width: 700px) and (max-width: 600px) {
+      article figure {
+        background-position: bottom !important;
+        position: static !important;
+        margin: 0 !important;
+        height: 100vh !important;
+        background-size: 70vh !important;
+        background-position: center 60vh !important; } }
+
+@media screen and (min-width: 700px) {
+    article .bubble {
+      position: absolute;
+      font-size: 1rem;
+      transition: opacity 2s;
+      background-repeat: no-repeat;
+      background-size: contain;
+      position: absolute;
+      box-sizing: border-box;
+      color: gray; }
+    article .newbubble {
+      border: 40px solid transparent;
+      border-image: url("svg/b.svg") 80;
+      transform: rotate(5deg);
+      position: absolute;
+      top: 6vh;
+      left: 50vw;
+      max-width: 25rem;
+      margin: auto;
+      overflow: auto; }
+      article .newbubble > div {
+        padding: 1rem;
+        line-height: 1.5rem;
+        background-color: white; } }
+    @media screen and (min-width: 700px) and (max-width: 600px) {
+      article .newbubble {
+        border: 0 !important;
+        border-image: none !important;
+        transform: none !important;
+        position: static !important;
+        margin: 0 !important;
+        max-width: none !important;
+        width: auto !important; }
+        article .newbubble ul {
+          padding: 1rem !important; }
+        article .newbubble div {
+          max-width: none !important;
+          background-color: transparent !important; } }
+    @media screen and (min-width: 700px) and (max-height: 600px) {
+      article .newbubble {
+        max-width: 40rem !important;
+        max-height: 50vh; }
+        article .newbubble div {
+          line-height: 1.2rem !important; } }
+  @media screen and (min-width: 700px) and (max-height: 800px) {
+    article#terapie-individualni {
+      background-position: bottom; } }
+
+@media screen and (min-width: 700px) {
+    article#terapie-individualni figure {
+      position: absolute;
+      content: '';
+      height: 300px;
+      width: 600px;
+      background-image: url(svg/terapie-individualni.svg);
+      background-size: contain;
+      left: 50%;
+      margin-left: -150px;
+      bottom: 20vh; }
+      article#terapie-individualni figure .newbubble {
+        border: 70px solid transparent;
+        border-image: url("svg/b-terapie-individualni.svg") 280;
+        transform: rotate(5deg);
+        position: absolute;
+        top: -330px;
+        margin: auto;
+        overflow: auto;
+        left: auto;
+        right: 150px;
+        margin-left: -20rem; }
+        article#terapie-individualni figure .newbubble > div {
+          padding: 1rem; }
+          article#terapie-individualni figure .newbubble > div ul {
+            padding: 0; } }
+    @media screen and (min-width: 700px) and (max-height: 800px) {
+      article#terapie-individualni figure {
+        bottom: 10vh !important;
+        height: 200px;
+        margin-left: -20px; }
+        article#terapie-individualni figure .newbubble {
+          right: 300px;
+          top: -250px; } }
+
+@media screen and (min-width: 700px) {
+    article#terapie-skupinova {
+      background-image: url(svg/terapie-skupinova.svg);
+      color: gray; }
+    article#terapeut figure {
+      position: absolute;
+      content: '';
+      height: 400px;
+      width: 400px;
+      background-image: url(svg/terapeut.svg);
+      background-size: contain;
+      background-position: center;
+      background-repeat: no-repeat;
+      left: 30%;
+      margin-left: -150px;
+      bottom: 50%;
+      margin-bottom: -300px; }
+      article#terapeut figure .newbubble {
+        top: -210px;
+        left: 250px;
+        margin: auto;
+        overflow: auto;
+        width: 600px;
+        max-width: 600px; }
+        article#terapeut figure .newbubble > div {
+          padding: 1rem;
+          background-color: white; } }
+    @media screen and (min-width: 700px) and (max-width: 1000px) {
+      article#terapeut figure {
+        width: 90vw;
+        left: 8rem;
+        margin-left: -40vw; } }
+    @media screen and (min-width: 700px) and (max-height: 700px) {
+      article#terapeut figure {
+        left: 20%; }
+        article#terapeut figure .newbubble {
+          top: -100px;
+          max-height: 60vh; } }
+
+@media screen and (min-width: 700px) {
+    article#kontakt {
+      background-size: 80vh; }
+      article#kontakt figure {
+        position: absolute;
+        content: '';
+        height: 400px;
+        width: 300px;
+        background-image: url(svg/kontakt.svg);
+        background-size: contain;
+        left: 40%;
+        margin-left: -150px;
+        bottom: 9rem; }
+        article#kontakt figure .newbubble {
+          transform: rotate(5deg);
+          position: absolute;
+          top: -100px;
+          left: 170px;
+          width: 25rem;
+          margin: auto;
+          overflow: auto; }
+          article#kontakt figure .newbubble > div {
+            line-height: 1.5rem;
+            padding: 1rem;
+            line-height: 2rem;
+            background-color: white; } }
+      @media screen and (min-width: 700px) and (max-height: 800px) {
+        article#kontakt figure {
+          bottom: 10vh; } }
+
+@media screen and (min-width: 700px) {
+    article#pravidla {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      align-content: center; }
+      article#pravidla .newbubble {
+        border: 80px solid transparent;
+        border-image: url("svg/b.svg") 80;
+        transform: rotate(5deg);
+        max-width: 40rem;
+        margin: auto;
+        margin-top: 1rem;
+        overflow: hidden;
+        left: auto; }
+        article#pravidla .newbubble > div {
+          height: 60vh;
+          overflow: auto; }
+    article#ladilna {
+      background-image: url(svg/ladilna.svg);
+      background-size: contain; }
+      article#ladilna .newbubble {
+        border-image: url("svg/b-ladilna.svg") 80;
+        transform: rotate(10deg);
+        top: 10vh;
+        right: 10vw;
+        width: 18rem;
+        max-height: 80vh;
+        padding: 0; }
+        article#ladilna .newbubble > div {
+          max-width: 50vw; }
+    article#terapie-skupinova .bubble {
+      display: none; } }
+    @media screen and (min-width: 700px) and (min-width: 700px) and (min-height: 500px) {
+      article#terapie-skupinova .bubble {
+        opacity: 0;
+        display: block;
+        padding: 2rem;
+        text-align: right;
+        line-height: 1.4rem;
+        top: 16rem;
+        margin-left: -2rem;
+        left: 50%;
+        padding: 3.5rem;
+        padding-bottom: 5rem;
+        font-size: 0.8rem;
+        line-height: 1rem;
+        transform-origin: left bottom;
+        border: 1px solid rgba(0, 0, 0, 0.4);
+        border-radius: 10px;
+        background: white;
+        padding: 0.5rem;
+        max-width: 200px;
+        top: calc(50% - 50px);
+        left: calc(50% - 200px/2);
+        box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
+        text-align: center;
+        min-height: 6rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transition: none;
+        font-style: italic;
+        font-family: Times, serif; }
+        article#terapie-skupinova .bubble:nth-child(3) {
+          transform: translate(70px, 280px);
+          animation: circle 30s 0s linear infinite; }
+        article#terapie-skupinova .bubble:nth-child(4) {
+          transform: translate(-160px, -200px);
+          animation: circle 30s 6s linear infinite; }
+        article#terapie-skupinova .bubble:nth-child(5) {
+          transform: translate(-300px, 0);
+          animation: circle 30s 12s linear infinite; }
+        article#terapie-skupinova .bubble:nth-child(6) {
+          transform: translate(-250px, 200px);
+          animation: circle 30s 18s linear infinite; }
+        article#terapie-skupinova .bubble:nth-child(7) {
+          transform: translate(300px, 80px);
+          animation: circle 30s 24s linear infinite; }
+        article#terapie-skupinova .bubble:nth-child(8) {
+          transform: translate(300px, -150px);
+          animation: circle 30s 30s linear infinite; }
+        article#terapie-skupinova .bubble:nth-child(9) {
+          transform: translate(70px, 280px);
+          animation: circle 30s 36s linear infinite; }
+        article#terapie-skupinova .bubble:nth-child(10) {
+          transform: translate(-160px, -200px);
+          animation: circle 30s 42s linear infinite; }
+        article#terapie-skupinova .bubble:nth-child(11) {
+          transform: translate(-300px, 0);
+          animation: circle 30s 48s linear infinite; }
+        article#terapie-skupinova .bubble:nth-child(12) {
+          transform: translate(-250px, 200px);
+          animation: circle 30s 54s linear infinite; }
+        article#terapie-skupinova .bubble:nth-child(13) {
+          transform: translate(300px, 80px);
+          animation: circle 30s 60s linear infinite; }
+        article#terapie-skupinova .bubble:nth-child(14) {
+          transform: translate(300px, -150px);
+          animation: circle 30s 66s linear infinite; }
+        article#terapie-skupinova .bubble:nth-child(15) {
+          transform: translate(70px, 280px);
+          animation: circle 30s 72s linear infinite; }
+        article#terapie-skupinova .bubble:nth-child(16) {
+          transform: translate(-160px, -200px);
+          animation: circle 30s 78s linear infinite; } }
+
+@media screen and (min-width: 700px) {
+    article#pravidla > div {
+      overflow: auto;
+      margin: auto;
+      margin-top: -1rem; } }
+
+body.terapie-skupinova .circle {
+  background-color: #849ecc; }
+
+body.pravidla .circle {
+  background-color: #da8319; }
+
+body.pravidla nav a[href="#pravidla"] {
+  border: 1px solid black;
+  opacity: 1; }
+
+body.ladilna .circle {
+  background-color: #68a8b8; }
+
+body.ladilna nav a[href="#ladilna"] {
+  border: 1px solid black;
+  opacity: 1; }
+
+body.ladilna article .bubble {
+  opacity: 1; }
+
+body.terapie-individualni .circle {
+  background-color: #2d93ad; }
+
+body.terapie-individualni nav a[href="#terapie-individualni"] {
+  border: 1px solid black;
+  opacity: 1; }
+
+body.terapie-individualni article .bubble {
+  opacity: 1; }
+
+body.terapie-skupinova .circle {
+  background-color: #d7696b; }
+
+body.terapie-skupinova nav a[href="#terapie-skupinova"] {
+  border: 1px solid black;
+  opacity: 1; }
+
+body.kontakt .circle {
+  background-color: #e1c2c2; }
+
+body.kontakt nav a[href="#kontakt"] {
+  border: 1px solid #180909;
+  opacity: 1; }
+
+body.kontakt article .bubble {
+  opacity: 1; }
+
+body.terapeut .circle {
+  background-color: #dbd56e; }
+
+body.terapeut nav a[href="#terapeut"] {
+  border: 1px solid black;
+  opacity: 1; }
+
+body.terapeut article .bubble {
+  opacity: 1; }
+
+@keyframes circle {
+  0% {
+    opacity: 0; }
+  1% {
+    opacity: 1; }
+  18% {
+    opacity: 1; }
+  20% {
+    opacity: 0; } }
