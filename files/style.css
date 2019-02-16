@@ -286,7 +286,7 @@ nav {
 @media screen and (min-width: 700px) {
     article#terapie-individualni figure {
       position: absolute;
-      content: '';
+      content: "";
       height: 300px;
       width: 600px;
       background-image: url(svg/terapie-individualni.svg);
@@ -324,7 +324,7 @@ nav {
       color: gray; }
     article#terapeut figure {
       position: absolute;
-      content: '';
+      content: "";
       height: 400px;
       width: 400px;
       background-image: url(svg/terapeut.svg);
@@ -362,7 +362,7 @@ nav {
       background-size: 80vh; }
       article#kontakt figure {
         position: absolute;
-        content: '';
+        content: "";
         height: 400px;
         width: 300px;
         background-image: url(svg/kontakt.svg);
@@ -439,7 +439,7 @@ nav {
         padding: 0.5rem;
         max-width: 200px;
         top: calc(50% - 50px);
-        left: calc(50% - 200px/2);
+        left: calc(50% - 200px / 2);
         box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
         text-align: center;
         min-height: 6rem;
