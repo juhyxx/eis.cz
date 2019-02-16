@@ -69,37 +69,18 @@ nav {
     nav a:hover {
       background-color: rgba(0, 0, 0, 0.2); }
 
-@media screen and (min-width: 700px) {
-  nav {
-    display: flex;
-    text-align: right;
-    top: 0rem;
-    text-transform: uppercase;
-    background-color: rgba(255, 255, 255, 0.7);
-    z-index: 100;
-    padding-left: 1rem;
-    padding-right: 1rem; } }
-  @media screen and (min-width: 700px) and (min-width: 700px) {
-    nav {
-      position: sticky;
-      margin-top: -28px;
-      flex-wrap: nowrap; } }
-
-@media screen and (min-width: 700px) {
-    nav a {
-      padding: 0.25rem 0.5rem; } }
-
 *[title] {
   border-bottom: 1px dotted black;
   cursor: help; }
   *[title]:hover {
     color: black; }
 
-@media screen and (max-width: 700px) {
+@media screen and (max-width: 699px) {
   article {
     line-height: 1.4rem;
     padding: 1rem;
-    min-height: 100vh; }
+    min-height: 20vh;
+    margin-bottom: 2rem; }
     article:after {
       content: '';
       background-repeat: no-repeat;
@@ -155,6 +136,20 @@ nav {
     margin: 1rem; } }
 
 @media screen and (min-width: 700px) {
+  nav {
+    display: flex;
+    text-align: right;
+    position: sticky;
+    margin-top: -28px;
+    flex-wrap: nowrap;
+    top: 0rem;
+    text-transform: uppercase;
+    background-color: rgba(255, 255, 255, 0.7);
+    z-index: 100;
+    padding-left: 1rem;
+    padding-right: 1rem; }
+    nav a {
+      padding: 0.25rem 0.5rem; }
   #logo {
     background-image: url(logo.svg);
     background-repeat: no-repeat;
@@ -429,8 +424,6 @@ nav {
       article#terapie-skupinova .bubble {
         opacity: 0;
         display: block;
-        padding: 2rem;
-        text-align: right;
         line-height: 1.4rem;
         top: 16rem;
         margin-left: -2rem;
@@ -453,14 +446,12 @@ nav {
         display: flex;
         justify-content: center;
         align-items: center;
-        transition: none;
-        font-style: italic;
-        font-family: Times, serif; }
+        transition: none; }
         article#terapie-skupinova .bubble:nth-child(3) {
           transform: translate(70px, 280px);
           animation: circle 30s 0s linear infinite; }
         article#terapie-skupinova .bubble:nth-child(4) {
-          transform: translate(-160px, -200px);
+          transform: translate(-180px, -200px);
           animation: circle 30s 6s linear infinite; }
         article#terapie-skupinova .bubble:nth-child(5) {
           transform: translate(-300px, 0);
@@ -469,16 +460,16 @@ nav {
           transform: translate(-250px, 200px);
           animation: circle 30s 18s linear infinite; }
         article#terapie-skupinova .bubble:nth-child(7) {
-          transform: translate(300px, 80px);
+          transform: translate(320px, 120px);
           animation: circle 30s 24s linear infinite; }
         article#terapie-skupinova .bubble:nth-child(8) {
-          transform: translate(300px, -150px);
+          transform: translate(300px, -100px);
           animation: circle 30s 30s linear infinite; }
         article#terapie-skupinova .bubble:nth-child(9) {
           transform: translate(70px, 280px);
           animation: circle 30s 36s linear infinite; }
         article#terapie-skupinova .bubble:nth-child(10) {
-          transform: translate(-160px, -200px);
+          transform: translate(-180px, -200px);
           animation: circle 30s 42s linear infinite; }
         article#terapie-skupinova .bubble:nth-child(11) {
           transform: translate(-300px, 0);
@@ -487,16 +478,16 @@ nav {
           transform: translate(-250px, 200px);
           animation: circle 30s 54s linear infinite; }
         article#terapie-skupinova .bubble:nth-child(13) {
-          transform: translate(300px, 80px);
+          transform: translate(320px, 120px);
           animation: circle 30s 60s linear infinite; }
         article#terapie-skupinova .bubble:nth-child(14) {
-          transform: translate(300px, -150px);
+          transform: translate(300px, -100px);
           animation: circle 30s 66s linear infinite; }
         article#terapie-skupinova .bubble:nth-child(15) {
           transform: translate(70px, 280px);
           animation: circle 30s 72s linear infinite; }
         article#terapie-skupinova .bubble:nth-child(16) {
-          transform: translate(-160px, -200px);
+          transform: translate(-180px, -200px);
           animation: circle 30s 78s linear infinite; } }
 
 @media screen and (min-width: 700px) {

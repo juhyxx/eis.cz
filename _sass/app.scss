@@ -8,176 +8,31 @@ $color5: #de8f6e;
 $breakpoint: 700px;
 
 @import 'collapsible';
+@import 'common';
 
  
-body {
-	margin: 0;
-	font-family: "Raleway", sans-serif;
-	color: gray;
+@media screen and (max-width: ($breakpoint - 1)) {
+	@import 'mobile';
 }
-
-html {
-	scroll-behavior: smooth;
-}
-
-a {
-	text-decoration: none;
-	color: black;
-	transition: background-color 1s;
-}
-
-h1,
-h2,
-h3 {
-	font-family: "Montserrat", sans-serif;
-}
-
-nav {
-	display: none;
-	text-transform: uppercase;
-	background-color: rgba(white, 0.7);
-	flex-wrap: wrap;
-	justify-content: flex-end;
-	a {
-		text-decoration: none;
-		white-space: nowrap;
-		opacity: 0.5;
-		border: 1px solid transparent;
-		padding:  0 0.5rem;
-		&:hover {
-			background-color: rgba(black, 0.2);
-		}
-	}
-}
-
 
 @media screen and (min-width: $breakpoint) {
 	nav {
 		display: flex;
 		text-align: right;
-		@media screen and (min-width: $breakpoint) {
-			position: sticky;
-			margin-top: -28px;
-			flex-wrap: nowrap;
-		}
+		position: sticky;
+		margin-top: -28px;
+		flex-wrap: nowrap;	
 		top: 0rem;
 		text-transform: uppercase;
 		background-color: rgba(white, 0.7);
 		z-index: 100;
+		padding-left: 1rem;
+		padding-right: 1rem;
 		a {
 			padding: 0.25rem 0.5rem;			
 		}
+	}
 
-		padding-left: 1rem;
-		padding-right: 1rem;
-	}
-}
-
-*[title] {
-	border-bottom: 1px dotted black;
-	cursor: help;
-	&:hover {
-		color: black;
-	}
-}
-
-@media screen and (max-width: $breakpoint) {
-	article {
-		line-height: 1.4rem;
-		padding: 1rem;
-		min-height: 100vh;
-		&:after {
-			content: '';
-			background-repeat: no-repeat;
-			height: 40vh;
-			width: 80vw;
-			display: block;
-			background-size: contain;
-			background-position: center bottom;
-		}
-		&#terapie-individualni{
-			h1 {
-				color: $color2!important;
-			}
-			&:after {
-				background-image: url(svg/terapie-individualni.svg);	
-			}
-		}
-		&#terapie-skupinova{
-			h1 {
-				color: $color2!important;
-			}
-			.bubble {
-				display: none;
-			}
-		}
-		&#terapie-skupinova{
-			h1 {
-				color: $color3!important;
-			}
-			&:after {
-				background-image: url(svg/terapie-skupinova.svg);	
-			}
-		}
-		&#ladilna{ 
-			h1 {
-				color: $color2!important;
-			}
-			&:after {
-				background-image: url(svg/ladilna.svg);	
-			}
-		}
-		&#kontakt{
-			h1 {
-				color: #e1c2c2!important;
-			}
-			&:after {
-				background-image: url(svg/kontakt.svg);	
-			}
-		}
-		&#pravidla{ 
-			h1 {
-				color: $color5!important;
-			}
-			&:after {
-				background-image: url(svg/pravidla.svg);	
-			}
-		}
-		&#terapeut{
-			h1 {
-				color: $color4!important;
-			}
-			&:after {
-				background-image: url(svg/terapeut.svg);	
-			}
-		}
-	}
-	nav {
-		flex-direction: column;
-		a {
-			padding: 0.5rem 1rem;
-		}
-	}
-	h1 {
-		text-align: center;
-		text-transform: uppercase;
-	}
-	figure {
-		margin: 0;
-	}
-	#logo {
-		background-image: url(logo.svg);
-		background-repeat: no-repeat;
-		background-size: contain;
-		height: 100vh;
-		width: 100wv;
-		background-position: center;
-		margin: 1rem
-	}
-}
-
-
-@media screen and (min-width: $breakpoint) {
 	#logo {
 		background-image: url(logo.svg);
 		background-repeat: no-repeat;
@@ -232,7 +87,6 @@ nav {
 				color: black;
 			}
 		}
-
 		h1 {
 			content: "";
 			color: white;
@@ -484,22 +338,15 @@ nav {
 				@media screen and (min-width: $breakpoint) and (min-height: 500px) {
 					opacity: 0;
 					display: block;
-					//background-image: url("svg/kontaktbubble.svg");
-					
-
-					padding: 2rem;
-					text-align: right;
 					line-height: 1.4rem;
 					top: 16rem;
 					margin-left: -2rem;
 					left: 50%;
 					padding: 3.5rem;
 					padding-bottom: 5rem;
-					//width: 255px;
 					font-size: 0.8rem;
 					line-height: 1rem;
 					transform-origin: left bottom;
-
 					border: 1px solid rgba(black, 0.4);
 					border-radius: 10px;
 					background: white;
@@ -515,17 +362,14 @@ nav {
 					align-items: center;
 					transition: none;
 
-
 					$list: (
-						(300px, -150px),
+						(300px, -100px),
 						(70px, 280px),
-						(-160px, -200px),
+						(-180px, -200px),
 						(-300px, 0),
 						(-250px, 200px),
-						(300px, 80px),
+						(320px, 120px),
 					);
-					font-style: italic;
-					font-family: Times, serif;
 
 					@for $i from 1 through 14 {
 						&:nth-child(#{$i+2}) {
