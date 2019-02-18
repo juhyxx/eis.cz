@@ -45,3 +45,16 @@ nav {
 		color: black;
 	}
 }
+
+.no-bullet {
+	list-style-type: none;
+	padding-left: 0;
+}
+
+article{
+
+ p, ul {
+    margin-top: 1px;
+    margin-bottom: 1px;
+  }
+}

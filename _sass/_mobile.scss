@@ -7,7 +7,7 @@ article {
         content: '';
         background-repeat: no-repeat;
         height: 40vh;
-        width: 80vw;
+        width: 100%;
         display: block;
         background-size: contain;
         background-position: center bottom;
@@ -50,7 +50,7 @@ article {
         }
         &:after {
             background-image: url(svg/kontakt.svg);	
-        }
+        } 
     }
     &#pravidla{ 
         h1 {
@@ -69,12 +69,7 @@ article {
         }
     }
 }
-nav {
-    flex-direction: column;
-    a {
-        padding: 0.5rem 1rem;
-    }
-}
+
 h1 {
     text-align: center;
     text-transform: uppercase;

@@ -10,9 +10,7 @@ $breakpoint: 700px;
 @import "collapsible";
 @import "common";
 
-@media screen and (max-width: ($breakpoint - 1)) {
-  @import "mobile";
-}
+@import "mobile";
 
 @media screen and (min-width: $breakpoint) {
   nav {
@@ -32,6 +30,7 @@ $breakpoint: 700px;
     }
   }
 
+
   #logo {
     background-image: url(logo.svg);
     background-repeat: no-repeat;
@@ -47,349 +46,72 @@ $breakpoint: 700px;
     text-align: center;
     padding-left: 300px;
   }
-  .circle {
-    position: fixed;
-    background-color: #2d93ad;
-    color: white;
-    width: 15rem;
-    height: 15rem;
-    @media screen and (min-height: 800px) {
-      width: 20rem;
-      height: 20rem;
-    }
-    display: flex;
-    border-radius: 50%;
-    bottom: -10rem;
+  
+  .bubble {
+    display: block!important;
+    position: absolute;
+    opacity: 0;
+    display: block;
+    line-height: 1.4rem;
+    top: 16rem;
+    margin-left: -2rem;
     left: 50%;
-    margin: 0;
-    margin-left: -10rem;
+    padding: 3.5rem;
+    padding-bottom: 5rem;
+    font-size: 0.8rem;
+    line-height: 1rem;
+    transform-origin: left bottom;
+    border: 1px solid rgba(black, 0.4);
+    border-radius: 10px;
+    background: white;
+    padding: 0.5rem;
+    max-width: 200px;
+    top: calc(50% - 50px);
+    left: calc(50% - 200px / 2);
+    box-shadow: 1px 1px 3px rgba(black, 0.1);
     text-align: center;
-    padding-top: 2rem;
-    box-sizing: border-box;
+    display: flex;
     justify-content: center;
-    text-transform: uppercase;
-    font-size: 1.5rem;
-    background-color: #da8319;
-    transition: background-color 1s;
+    align-items: center;
+    transition: none;
+
+    $list: ((300px, 200px), (-300px, 200px));
+
+    @for $i from 1 through 14 {
+      &:nth-child(#{$i + 1}) {
+        $item: nth($list, ($i % 2)+ 1);
+        transform: translate(nth($item, 1), nth($item, 2));
+        animation: circle 30s (($i - 1) * 6s) linear infinite;
+      }
+    }
   }
+
   article {
-    height: 100vh;
     position: relative;
-    background-repeat: no-repeat;
-    background-position: center;
-    overflow: hidden;
-
-    a {
-      border-bottom: 1px solid black;
-      color: gray;
-      &:hover {
-        color: black;
-      }
-    }
     h1 {
-      content: "";
-      color: white;
-      width: 20rem;
-      height: 20rem;
-      display: flex;
-      position: absolute;
-      left: 50%;
-      margin: 0;
-      text-align: center;
-      box-sizing: border-box;
+      font-size: 3rem;
+      margin-bottom: 1rem;
+    }
+    margin-left: 250px;
+    margin-right: 50px;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    line-height: 1.6rem;
+    max-width: 1000px;
+    section {
       justify-content: center;
-      text-transform: uppercase;
-      font-size: 1rem;
-      bottom: -17rem;
-      margin-left: -12rem;
-      @media screen and (min-height: 800px) {
-        padding-top: 2rem;
-        bottom: -12rem;
-        font-size: 1.5rem;
-        margin-left: -10rem;
-      }
     }
-    figure {
-      background-repeat: no-repeat;
-      @media screen and (max-width: 600px) {
-        background-position: bottom !important;
-        position: static !important;
-        margin: 0 !important;
-        height: 100vh !important;
-        background-size: 70vh !important;
-        background-position: center 60vh !important;
-      }
+    &:after {
+      min-height: 300px;
+      min-width: 300px;
     }
-    .bubble {
-      position: absolute;
-      font-size: 1rem;
-      transition: opacity 2s;
-      background-repeat: no-repeat;
-      background-size: contain;
-      position: absolute;
-      box-sizing: border-box;
-      color: gray;
-    }
-    .newbubble {
-      border: 40px solid transparent;
-      border-image: url("svg/b.svg") 80;
-      transform: rotate(5deg);
-      position: absolute;
-      top: 6vh;
-      left: 50vw;
-      max-width: 25rem;
-      margin: auto;
-      overflow: auto;
-      & > div {
-        padding: 1rem;
-        line-height: 1.5rem;
-        background-color: white;
-      }
-      @media screen and (max-width: 600px) {
-        border: 0 !important;
-        border-image: none !important;
-        transform: none !important;
-        position: static !important;
-        margin: 0 !important;
-        max-width: none !important;
-        width: auto !important;
-        ul {
-          padding: 1rem !important;
-        }
-        div {
-          max-width: none !important;
-          background-color: transparent !important;
-        }
-      }
-      @media screen and (max-height: 600px) {
-        max-width: 40rem !important;
-        max-height: 50vh;
-        div {
-          line-height: 1.2rem !important;
-        }
-      }
-    }
-    &#terapie-individualni {
-      @media screen and (max-height: 800px) {
-        background-position: bottom;
-      }
-      figure {
-        position: absolute;
-        content: "";
-        height: 300px;
-        width: 600px;
-        background-image: url(svg/terapie-individualni.svg);
-        background-size: contain;
-        left: 50%;
-        margin-left: -150px;
-        bottom: 20vh;
-        .newbubble {
-          border: 70px solid transparent;
-          border-image: url("svg/b-terapie-individualni.svg") 280;
-          transform: rotate(5deg);
-          position: absolute;
-          top: -330px;
-          margin: auto;
-          overflow: auto;
-          left: auto;
-          right: 150px;
-          margin-left: -20rem;
-          & > div {
-            ul {
-              padding: 0;
-            }
-            padding: 1rem;
-          }
-        }
-        @media screen and (max-height: 800px) {
-          bottom: 10vh !important;
-          height: 200px;
-          margin-left: -20px;
-          .newbubble {
-            right: 300px;
-            top: -250px;
-          }
-        }
-      }
-    }
-    &#terapie-skupinova {
-      background-image: url(svg/terapie-skupinova.svg);
-      color: gray;
-    }
-    &#terapeut {
-      figure {
-        position: absolute;
-        content: "";
-        height: 400px;
-        width: 400px;
-        background-image: url(svg/terapeut.svg);
-        background-size: contain;
-        background-position: center;
-        background-repeat: no-repeat;
-        left: 30%;
-        margin-left: -150px;
-        bottom: 50%;
-        margin-bottom: -300px;
-        .newbubble {
-          top: -210px;
-          left: 250px;
-          margin: auto;
-          overflow: auto;
-          width: 600px;
-          max-width: 600px;
-          & > div {
-            padding: 1rem;
-            background-color: white;
-          }
-        }
-        @media screen and (max-width: 1000px) {
-          width: 90vw;
-          left: 8rem;
-          margin-left: -40vw;
-        }
-        @media screen and (max-height: $breakpoint) {
-          left: 20%;
-          .newbubble {
-            top: -100px;
-            max-height: 60vh;
-          }
-        }
-      }
-    }
-
-    &#kontakt {
-      background-size: 80vh;
-      figure {
-        position: absolute;
-        content: "";
-        height: 400px;
-        width: 300px;
-        background-image: url(svg/kontakt.svg);
-        background-size: contain;
-        left: 40%;
-        margin-left: -150px;
-        bottom: 9rem;
-        .newbubble {
-          transform: rotate(5deg);
-          position: absolute;
-          top: -100px;
-          left: 170px;
-          width: 25rem;
-          margin: auto;
-          overflow: auto;
-          & > div {
-            line-height: 1.5rem;
-            padding: 1rem;
-            line-height: 2rem;
-            background-color: white;
-          }
-        }
-        @media screen and (max-height: 800px) {
-          bottom: 10vh;
-        }
-      }
-    }
-
-    &#pravidla {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      align-content: center;
-      .newbubble {
-        border: 80px solid transparent;
-        border-image: url("svg/b.svg") 80;
-        transform: rotate(5deg);
-        max-width: 40rem;
-
-        margin: auto;
-        margin-top: 1rem;
-        overflow: hidden;
-        left: auto;
-        & > div {
-          height: 60vh;
-          overflow: auto;
-        }
-      }
-    }
-    &#ladilna {
-      background-image: url(svg/ladilna.svg);
-      background-size: contain;
-      .newbubble {
-        border-image: url("svg/b-ladilna.svg") 80;
-        transform: rotate(10deg);
-        top: 10vh;
-        right: 10vw;
-        width: 18rem;
-        max-height: 80vh;
-        padding: 0;
-        & > div {
-          max-width: 50vw;
-        }
-      }
-    }
-
-    &#terapie-skupinova {
-      .bubble {
-        display: none;
-        @media screen and (min-width: $breakpoint) and (min-height: 500px) {
-          opacity: 0;
-          display: block;
-          line-height: 1.4rem;
-          top: 16rem;
-          margin-left: -2rem;
-          left: 50%;
-          padding: 3.5rem;
-          padding-bottom: 5rem;
-          font-size: 0.8rem;
-          line-height: 1rem;
-          transform-origin: left bottom;
-          border: 1px solid rgba(black, 0.4);
-          border-radius: 10px;
-          background: white;
-          padding: 0.5rem;
-          max-width: 200px;
-          top: calc(50% - 50px);
-          left: calc(50% - 200px / 2);
-          box-shadow: 1px 1px 3px rgba(black, 0.1);
-          text-align: center;
-          min-height: 6rem;
-          display: flex;
-          justify-content: center;
-          align-items: center;
-          transition: none;
-
-          $list: ((300px, -100px), (70px, 280px), (-180px, -200px), (-300px, 0), (-250px, 200px), (320px, 120px));
-
-          @for $i from 1 through 14 {
-            &:nth-child(#{$i + 2}) {
-              $item: nth($list, ($i % 6)+ 1);
-              transform: translate(nth($item, 1), nth($item, 2));
-              animation: circle 30s (($i - 1) * 6s) linear infinite;
-            }
-          }
-        }
-      }
-    }
-    &#pravidla {
-      & > div {
-        overflow: auto;
-        margin: auto;
-        margin-top: -1rem;
-      }
-    }
-  }
-}
-
-body.terapie-skupinova {
-  .circle {
-    background-color: #849ecc;
   }
 }
 
 body.pravidla {
-  .circle {
-    background-color: #da8319;
-  }
   nav a[href="#pravidla"] {
     border: 1px solid black;
     opacity: 1;
@@ -397,34 +119,19 @@ body.pravidla {
 }
 
 body.ladilna {
-  .circle {
-    background-color: #68a8b8;
-  }
   nav a[href="#ladilna"] {
     border: 1px solid black;
-    opacity: 1;
-  }
-  article .bubble {
     opacity: 1;
   }
 }
 
 body.terapie-individualni {
-  .circle {
-    background-color: $color2;
-  }
   nav a[href="#terapie-individualni"] {
     border: 1px solid black;
     opacity: 1;
   }
-  article .bubble {
-    opacity: 1;
-  }
 }
 body.terapie-skupinova {
-  .circle {
-    background-color: #d7696b;
-  }
   nav a[href="#terapie-skupinova"] {
     border: 1px solid black;
     opacity: 1;
@@ -432,26 +139,14 @@ body.terapie-skupinova {
 }
 
 body.kontakt {
-  .circle {
-    background-color: #e1c2c2;
-  }
   nav a[href="#kontakt"] {
     border: 1px solid rgb(24, 9, 9);
     opacity: 1;
   }
-  article .bubble {
-    opacity: 1;
-  }
 }
 body.terapeut {
-  .circle {
-    background-color: $color4;
-  }
   nav a[href="#terapeut"] {
     border: 1px solid black;
-    opacity: 1;
-  }
-  article .bubble {
     opacity: 1;
   }
 }
